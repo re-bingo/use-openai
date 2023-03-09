@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "use-openai"
+version = "0.1.0"
+description = ""
+authors = ["CNSeniorious000 <wjj123345567@icloud.com>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = { extras = ["http2", "socks"], version = "^0.23.3" }
+starlite = { extras = ["brotli"], version = "^1.51.6" }
+msgspec = "^0.13.1"
+uvicorn = { extras = ["standard"], version = "^0.20.0" }
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
