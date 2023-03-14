@@ -1,8 +1,9 @@
 from random import choice
 
-from env import api_keys, proxies
 from httpx import AsyncClient, Timeout
 from starlite import Provide
+
+from env import api_keys, proxies
 
 inject_sk = {"bearer": Provide(lambda: {"Authorization": f"Bearer {choice(api_keys)}"})}
 
