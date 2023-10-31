@@ -103,7 +103,7 @@ async def chat_streaming_reformed(socket: WebSocket, bearer: dict = Dependency()
                     messages.append(await results_queue.get())
                 new_result_event.clear()
 
-                if len(messages) == 0:
+                if not messages:
                     return
 
                 if len(messages) == 1:
